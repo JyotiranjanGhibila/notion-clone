@@ -32,16 +32,14 @@ const Heading = () => {
           </Link>
         </Button>
       )}
-      {
-        !isAuthenticated && !isLoading && (
-          <SignInButton mode="modal">
-            <Button>
-              Get Notion free
-              <ArrowRight className="h-4 w-4 ml-2" />
-            </Button>
-          </SignInButton>
-        )
-      }
+      {!isAuthenticated && !isLoading && (
+        <SignInButton mode="modal">
+          <Button>
+            Get Notion free
+            <ArrowRight className="h-4 w-4 ml-2" />
+          </Button>
+        </SignInButton>
+      )}
     </div>
   );
 };
