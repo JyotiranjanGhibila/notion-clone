@@ -2,6 +2,7 @@
 
 import { UploadCloudIcon, X } from "lucide-react";
 import * as React from "react";
+import Image from "next/image";
 import { useDropzone, type DropzoneOptions } from "react-dropzone";
 import { twMerge } from "tailwind-merge";
 
@@ -123,14 +124,14 @@ const SingleImageDropzone = React.forwardRef<HTMLInputElement, InputProps>(
 
     return (
       <div className="relative">
-        {
-            disabled && (
-                <div className="flex items-center justify-center absolute
-                inset-y-0 h-full w-full bg-background/80 z-[50] ">
-                    <Spinner size="lg"/>
-                </div>
-            )
-        }
+        {disabled && (
+          <div
+            className="flex items-center justify-center absolute
+                inset-y-0 h-full w-full bg-background/80 z-[50] "
+          >
+            <Spinner size="lg" />
+          </div>
+        )}
         <div
           {...getRootProps({
             className: dropZoneClassName,
@@ -145,8 +146,10 @@ const SingleImageDropzone = React.forwardRef<HTMLInputElement, InputProps>(
 
           {imageUrl ? (
             // Image Preview
-            <img
+            <Image
               className="h-full w-full rounded-md object-cover"
+              width="100"
+              height="100"
               src={imageUrl}
               alt={acceptedFiles[0]?.name}
             />
@@ -155,9 +158,8 @@ const SingleImageDropzone = React.forwardRef<HTMLInputElement, InputProps>(
             <div className="flex flex-col items-center justify-center text-xs text-gray-400">
               <UploadCloudIcon className="mb-2 h-7 w-7" />
               <div className="text-gray-400">
-               Click or drag & drop to upload
-                </div>
-           
+                Click or drag & drop to upload
+              </div>
             </div>
           )}
 
