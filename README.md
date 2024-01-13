@@ -3,7 +3,7 @@
 
 ## Overview
 
-Welcome to your Notion Clone project, a connected workspace where your ideas, documents, and plans come together for better, faster work. This project aims to replicate the functionalities of Notion using a modern tech stack.
+Welcome to the Notion Clone project, a connected workspace where your ideas, documents, and plans come together for better, faster work. This project aims to replicate the functionalities of Notion using a modern tech stack.
 
 ![Screenshot Capture - 2023-12-28 - 13-32-15](https://github.com/JyotiranjanGhibila/notion-clone/assets/107979908/b43f8c93-6590-4c25-82e3-52b1b2aaa17e)
 
